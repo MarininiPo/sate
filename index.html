@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Строительная компания</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+    <link rel="stylesheet" href="./css/normolize.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-row">
+          <div class="logo">
+            <a href="#"><img src="./img/logo.svg" alt="logo" /></a>
+          </div>
+          <div class="menu">
+            <a href="#"
+              ><img src="./img/menu-gamburger.svg" alt="menu-gamburger"
+            /></a>
+          </div>
+        </div>
+        <div class="header-title">
+          <h1 class="header-title-h1">РЕАЛИЗУЕМ КРУПНЕЙШИЕ ПРОЕКТЫ В РОССИИ</h1>
+          <h4 class="header-title-h4">стадионы, газопроводы, мосты, дамбы</h4>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="container">
+        <div class="yers-old">
+          <div class="yers-old-numbers">
+            <h2 class="num">26</h2>
+            <h2 class="yers">лет</h2>
+            <p class="old-p">на рынке</p>
+          </div>
+  
+          <div class="yers-old-numbers">
+              <h2 class="num">26</h2>
+              <h2 class="yers">лет</h2>
+              <p class="old-p">на рынке</p>
+            </div>
+  
+            <div class="yers-old-numbers">
+              <h2 class="num">26</h2>
+              <h2 class="yers">лет</h2>
+              <p class="old-p">на рынке</p>
+            </div>
+  
+            <div class="yers-old-numbers">
+              <h2 class="num">26</h2>
+              <h2 class="yers">лет</h2>
+              <p class="old-p">на рынке</p>
+            </div>
+        </div>
+      </section>
+    
+      <section class="big-projects">
+        <div class="container big-projects-content">
+          <h2 class="big-projects-h2">НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ</h2>
+          <div class="big-projects-items"></div>
+        </div>
+      </section>
+
+<!-- Шаблон для проектов -->
+<script id="big-projects-template" type="text/x-handlebars-template">
+    {{#each projects}}
+      <div class="item-project">
+        <img src="{{imgSrc}}" class="item-project-img" alt="{{title}}">
+        <img src="{{rectangleImgSrc}}" class="item-project-rectangle" alt="Rectangle">
+        <h3 class="item-project-h3">{{title}}</h3>
+        <p class="item-project-p">{{description}}</p>
+      </div>
+    {{/each}}
+  </script>
+  
+
+   
+
+      <section class="smart-projects">
+        <div class="container smart-projects-row">
+            <div class="smart-projects-content">
+                <h2 class="smart-projects-h2">САМЫЕ УМНЫЕ ПРОЕКТЫ</h2>
+                <h4 class="smart-projects-h4">РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В РОССИИ!</h4>
+            </div>
+
+            <div class="smart-projects-btn">
+                
+                <button class="smart-btn">
+                    <img src="./img/mail.svg" class="smart-btn-mail" alt="mail">ВАШ ЗАПРОС</button>
+            
+            </div>
+        </div>
+      </section>
+
+     
+      <section class="about-work">
+        <div class="container about-work-content">
+          <h2 class="about-work-h2">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h2>
+          <div class="about-work-items"></div>
+        </div>
+      </section>
+
+      <!-- Шаблон для блоков "О нас" -->
+<script id="about-work-template" type="text/x-handlebars-template">
+    {{#each items}}
+      <div class="about-work-item">
+        <img src="{{iconSrc}}" alt="{{iconAlt}}">
+        <h4 class="about-work-h4">{{title}}</h4>
+      </div>
+    {{/each}}
+  </script>
+  
+
+      
+
+      
+      <section class="images-bilding">
+        <div class="images-bilding-grid"></div>
+      </section>
+
+      <!-- Шаблон для строительных изображений -->
+<script id="images-building-template" type="text/x-handlebars-template">
+    {{#each images}}
+      <div class="images-bilding-grid-item">
+        <img src="{{imgSrc}}" alt="{{altText}}" class="bilding-img">
+      </div>
+    {{/each}}
+  </script>
+  
+
+      <section class="questions">
+        <div class="container">
+            <h2 class="questions-h2">ОТВЕТЫ НА ВОПРОСЫ</h2>
+            <div class="questions-items">
+                <div class="questions-item">
+                    <h3 class="questions-items-h3 close ">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</h3>
+                    <p class="questions-items-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                </div>
+
+                <div class="questions-item">
+                    <h3 class="questions-items-h3 close">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</h3>
+                    <p class="questions-items-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                </div>
+
+                <div class="questions-item">
+                    <h3 class="questions-items-h3 close">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</h3>
+                    <p class="questions-items-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                </div>
+
+                <div class="questions-item">
+                    <h3 class="questions-items-h3 close">РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?</h3>
+                    <p class="questions-items-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</p>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container partners-content">
+            <h2 class="partners-h2">наши партнеры</h2>
+            <div class="partners-logos">
+                <img src="./img/partner-logo.svg" alt="partner logo">
+                <img src="./img/partner-logo.svg" alt="partner logo">
+                <img src="./img/partner-logo.svg" alt="partner logo">
+                <img src="./img/partner-logo.svg" alt="partner logo">
+                <img src="./img/partner-logo.svg" alt="partner logo">
+
+            </div>
+        </div>
+      </section>
+
+      <section class="reviews">
+        <div class="container reviews-content">
+            <h2 class="reviews-h2">отзывы о работе с нами</h2>
+            <div class="reviews-content-items">
+               <div class="item-content">
+                    <div class="item">
+                        <img src="./img/reviews.svg" alt="reviews" class="reviews-img">
+
+                        <p class="item-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+                    
+                    </div>
+                    <h4 class="item-content-reviews-h4">Иванов Иван, <span>ООО “Газпром-Арена”</span></h4>
+               </div>
+
+               <div class="item-content">
+                <div class="item">
+                    <img src="./img/reviews.svg" alt="reviews" class="reviews-img">
+
+                    <p class="item-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+                
+                </div>
+                <h4 class="item-content-reviews-h4">Иванов Иван, <span>ООО “Газпром-Арена”</span></h4>
+           </div>
+
+           <div class="item-content">
+            <div class="item">
+                <img src="./img/reviews.svg" alt="reviews" class="reviews-img">
+                <p class="item-p">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов.</p>
+            
+            </div>
+            <h4 class="item-content-reviews-h4">Иванов Иван, <span>ООО “Газпром-Арена”</span></h4>
+       </div>
+            </div>
+        </div>
+      </section>
+
+      <section class="smart-projects">
+        <div class="container smart-projects-row">
+            <div class="smart-projects-content">
+                <h2 class="smart-projects-h2">ХОТИТЕ С НАМИ РАБОТАТЬ?</h2>
+                <h4 class="smart-projects-h4">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С ВАМИ!</h4>
+            </div>
+
+            <div class="smart-projects-btn">
+                <button class="smart-btn"><img src="./img/mail.svg" class="smart-btn-mail" alt="mail">ВАШ ЗАПРОС</button>
+            </div>
+        </div>
+      </section>
+
+      <section class="contacts">
+        <div class="container contacts-content">
+            <h2 class="contacts-h2">КОНТАКТЫ</h2>
+            <div class="contacts-content-items">
+                <div class="contacts-items">
+                    <div class="item-contact">
+                        <img src="./img/adres.svg" alt="adress">
+                        <h3 class="item-contact-h3">АДРЕС:</h3>
+                        <h4 class="item-contact-h4">НЕВСКИЙ ПРОСПЕКТ 140,
+                            ОФИС 140-142</h4>
+                    </div>
+                </div>
+    
+                <div class="contacts-items">
+                    <div class="item-contact">
+                        <img src="./img/tel.svg" alt="phone">
+                        <h3 class="item-contact-h3">ТЕЛЕФОН:</h3>
+                        <h4 class="item-contact-h4">8 (812) 111-22-33<br>
+                            8 (812) 111-22-33</h4>
+                    </div>
+                </div>
+    
+                <div class="contacts-items">
+                    <div class="item-contact">
+                        <img src="./img/time.svg" alt="Time">
+                        <h3 class="item-contact-h3">ВРЕМЯ РАБОТЫ:</h3>
+                        <h4 class="item-contact-h4">ПН-СБ<br>
+                            10:00 - 20:00</h4>
+                    </div>
+                </div>
+    
+                <div class="contacts-items">
+                    <div class="item-contact">
+                        <img src="./img/big-mail.svg" alt="mail">
+                        <h3 class="item-contact-h3">E-MAIL:</h3>
+                        <h4 class="item-contact-h4"><a href="#" >INFO@VIP.RU</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container footer-content">
+            <p class="copiright">© 2019 Строительная компания</p>
+            <p class="studio">Разработано лучшей студей</p>
+        </div>
+    </footer>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
